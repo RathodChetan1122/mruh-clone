@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Faculty Dashboard</h2>
+<p><strong>Name:</strong> {{ user.name }}</p>
+
+<h3>Post Attendance</h3>
+<form method="post" action="{{ url_for('faculty_post_attendance') }}">
+    <label>Student:
+        <select name="student_id" required>
+            {% for s in students %}
+            <option value="{{ s.id }}">{{ s.roll_no }} — {{ s.name }}</option>
+            {% endfor %}
+        </select>
+    </label><br><br>
+    <label>Date: <input type="date" name="date" value="{{ ('' ) }}" required></label><br><br>
+    <label>Present: <input type="checkbox" name="present" checked></label><br><br>
+    <button type="submit">Record Attendance</button>
+</form>
+
+<hr>
+
+<h3>Add / Update Marks</h3>
+<form method="post" action="{{ url_for('faculty_update_marks') }}">
+    <label>Student:
+        <select name="student_id" required>
+            {% for s in students %}
+            <option value="{{ s.id }}">{{ s.roll_no }} — {{ s.name }}</option>
+            {% endfor %}
+        </select>
+    </label><br><br>
+    <input name="subject" placeholder="Subject name" required><br><br>
+    <input name="marks" type="number" step="0.01" placeholder="Marks obtained" required><br><br>
+    <input name="term" placeholder="Term (eg: Semester 1)"><br><br>
+    <button type="submit">Add / Update Marks</button>
+</form>
+
+<hr>
+<h3>Class List</h3>
+<table border="1" cellpadding="6">
+    <tr><th>Roll</th><th>Name</th><th>Course</th><th>Year</th></tr>
+    {% for s in students %}
+    <tr>
+        <td>{{ s.roll_no }}</td>
+        <td>{{ s.name }}</td>
+        <td>{{ s.course }}</td>
+        <td>{{ s.year }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<p><a href="{{ url_for('logout') }}">Logout</a></p>
+{% endblock %}

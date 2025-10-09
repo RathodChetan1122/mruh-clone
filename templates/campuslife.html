@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="page-header">
+    <h2>Campus Life</h2>
+</section>
+
+<section class="campus">
+    <p>
+        Our campus offers a vibrant environment with a blend of academics, culture, and recreation.  
+        Students enjoy modern hostels, sports facilities, cultural clubs, and a green campus.
+    </p>
+
+    <div class="grid">
+        <div class="card">
+            <img src="{{ url_for('static', filename='images/campus1.jpg') }}" alt="Library">
+            <h3>Library</h3>
+            <p>Well-stocked digital and physical resources to support learning.</p>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='images/campus2.jpg') }}" alt="Sports">
+            <h3>Sports</h3>
+            <p>World-class stadiums, courts, and fitness centers for students.</p>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='images/campus3.jpg') }}" alt="Hostels">
+            <h3>Hostels</h3>
+            <p>Safe and comfortable on-campus accommodation with dining facilities.</p>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

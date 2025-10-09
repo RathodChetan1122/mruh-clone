@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="page-bg" style="background-image: url('{{ url_for('static', filename='images/banner2.jpg') }}');">
+    <section class="page-header">
+        <h2>About Us</h2>
+    </section>
+</div>
+
+<section class="about" style="padding: 40px; max-width: 900px; margin: auto;">
+    <p>
+        Mallareddy University (Clone) is a premier institution focused on providing 
+        world-class education, research opportunities, and holistic student development.  
+        Founded in 2025 (demo content), the university offers a wide range of programs across 
+        engineering, management, sciences, and humanities.
+    </p>
+
+    <h3>Our Vision</h3>
+    <p>To be a leading global university, nurturing talent and innovation.</p>
+
+    <h3>Our Mission</h3>
+    <ul>
+        <li>Provide quality education with industry relevance.</li>
+        <li>Promote research and innovation.</li>
+        <li>Develop socially responsible global citizens.</li>
+    </ul>
+</section>
+
+{% endblock %}

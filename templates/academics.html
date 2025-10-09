@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="page-header">
+    <h2>Academics</h2>
+</section>
+
+<section class="academics">
+    <p>
+        Our academic programs are designed to prepare students for success in their careers.  
+        With expert faculty, modern labs, and industry collaborations, we offer hands-on learning.
+    </p>
+
+    <div class="grid">
+        {% for s in schools %}
+        <div class="card">
+            <h3>{{ s.name }}</h3>
+            <p>{{ s.desc }}</p>
+            <a href="#">Learn More</a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0; padding: 0;
+}
+header {
+    background: #800000;
+    color: white;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+.navbar nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+.banner img {
+    width: 100%;
+    height: auto;
+}
+.intro, .schools, .events {
+    padding: 20px;
+}
+.grid {
+    display: flex;
+    gap: 20px;
+}
+.card {
+    background: #f5f5f5;
+    padding: 15px;
+    border-radius: 8px;
+    flex: 1;
+}
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+.page-header {
+    background: #eee;
+    padding: 20px;
+    text-align: center;
+}
+
+form input, form textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 8px;
+    margin: 5px 0;
+}
+form button {
+    background: #800000;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+form button:hover {
+    background: #a00000;
+}
+.campus .card img {
+    width: 100%;       /* Fill card width */
+    height: 200px;     /* Fixed height for all campus images */
+    object-fit: cover; /* Crop & maintain aspect ratio */
+    border-radius: 8px;
+}
+form input, form select, form textarea {
+    padding: 8px;
+    margin: 6px 0;
+    width: 100%;
+    max-width: 480px;
+}
+
+button {
+    background: #800000;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.flash {
+    padding: 8px;
+    margin: 10px 0;
+}
+.page-bg {
+  background-size: cover;       /* scale to cover full div */
+  background-position: center;  /* center the image */
+  background-repeat: no-repeat; /* no tiling */
+  width: 100%;
+  height: 100vh;                /* full screen height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 2px 2px 4px black;
+}
+
+.page-header h2 {
+  font-size: 3rem;
+  font-weight: bold;
+}

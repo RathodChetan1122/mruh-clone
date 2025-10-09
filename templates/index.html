@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="banner">
+    <img src="{{ url_for('static', filename='images/banner1.jpg') }}" alt="Banner">
+</section>
+
+<section class="intro">
+    <h2>Welcome to Mallareddy University (Clone)</h2>
+    <p>A premier institution for higher education. This is a demo clone site built using Flask.</p>
+</section>
+
+<section class="schools">
+    <h2>Schools & Programs</h2>
+    <div class="grid">
+        {% for s in schools %}
+        <div class="card">
+            <h3>{{ s.name }}</h3>
+            <p>{{ s.desc }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="events">
+    <h2>Upcoming Events</h2>
+    <ul>
+        {% for e in events %}
+        <li><strong>{{ e.title }}</strong> - {{ e.date }}</li>
+        {% endfor %}
+    </ul>
+</section>
+
+{% endblock %}
